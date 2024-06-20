@@ -1,18 +1,29 @@
-<h2>Products</h2>
-
-<div *ngFor="let product of products">
-  <a
-    [title]="product.name + ' details'"
-    [routerLink]="['/products', product.id]"
-  >
-    {{ product.name }}
-  </a>
-
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
-
-  <button type="button" (click)="share()">Share</button>
-  <app-product-alerts [product]="product" (notify)="onNotify()">
-  </app-product-alerts>
+<div *ngFor="let product of products" class="grid">
+  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="px-6 py-4">
+      <a
+        class="font-bold text-xl mb-2"
+        [routerLink]="['/products', product.id]"
+      >
+        {{ product.name }}
+      </a>
+      <p class="text-gray-700 text-base" *ngIf="product.description">
+        {{ product.description }}
+      </p>
+    </div>
+    <div class="px-6 pb-2">
+      <span class="inline-block text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <button type="button" (click)="share()">Share</button></span
+      >
+      <span class="inline-block text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <app-product-alerts [product]="product" (notify)="onNotify()">
+        </app-product-alerts>
+      </span>
+      <span class="inline-block text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <app-quick-buy [product]="product"></app-quick-buy>
+      </span>
+    </div>
+  </div>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
