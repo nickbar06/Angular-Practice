@@ -1,1 +1,1 @@
-<button type="button" (click)="quickBuy(product)">Buy</button>
+<button type="button" [disabled]="product.stock < 1" (click)="quickBuy(product)">Buy</button>
