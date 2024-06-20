@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from './products';
+import { Product, products } from './products';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CartService {
+  products!: Product[];
   items: Product[] = [];
 
   constructor(
@@ -14,7 +15,10 @@ export class CartService {
   ) {}
 
   addToCart(product: Product) {
-    this.items.push(product);
+    if(product.stock >= 1) {
+      this.items.push(product);
+      product.stock -= 1;
+    }
   }
 
   getCart() {
