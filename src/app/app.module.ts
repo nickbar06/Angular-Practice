@@ -5,13 +5,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CartComponent } from './cart/cart.component';
-import { ShippingComponent } from './shipping/shipping.component';
-import { QuickBuyComponent } from './quick-buy/quick-buy.component';
+import { MainScreenScomponentComponent } from './main-screen-scomponent/main-screen-scomponent.component';
+import { ActionPickerComponent } from './action-picker/action-picker.component';
+import { LibraryComponent } from './library/library.component';
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
+import { CenterStageComponent } from './center-stage/center-stage.component';
+import { ChatViewComponent } from './center-stage/chat-view/chat-view.component';
+import { HomeViewComponent } from './center-stage/home-view/home-view.component';
+import { NowPlayingComponent } from './bottom-bar/now-playing/now-playing.component';
+import { PlayerComponent } from './bottom-bar/player/player.component';
 
 @NgModule({
   imports: [
@@ -19,25 +21,24 @@ import { QuickBuyComponent } from './quick-buy/quick-buy.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent },
+      { path: '', component: MainScreenScomponentComponent },
     ]),
   ],
   declarations: [
     AppComponent,
-    TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
-    CartComponent,
-    ShippingComponent,
-    QuickBuyComponent,
+    MainScreenScomponentComponent,
+    ActionPickerComponent,
+    LibraryComponent,
+    BottomBarComponent,
+    CenterStageComponent,
+    ChatViewComponent,
+    HomeViewComponent,
+    NowPlayingComponent,
+    PlayerComponent,
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
 
 /*
 Copyright Google LLC. All Rights Reserved.

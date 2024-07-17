@@ -1,0 +1,24 @@
+.like-button {
+    border-radius: 100%;
+    width: 50%;
+    height: 50%;
+    padding: 1px;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+}
+
+.like-button:hover {
+    border: 1px solid white;
+}
+
+.liked {
+    background-color: #1DB954;
+}
+
+.unliked {
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid white;
+}

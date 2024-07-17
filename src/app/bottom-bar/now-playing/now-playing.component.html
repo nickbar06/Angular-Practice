@@ -1,0 +1,32 @@
+<div class="flex items-center h-full w-full" *ngIf="currentSong">
+    <!-- Album Artwork Placeholder -->
+    <div class="w-14 h-14 flex items-center justify-center rounded-full mr-4">
+        <!-- Album artwork here -->
+        <img class="rounded-full w-13 h-13" [src]="currentSong.artwork" />
+    </div>
+    <!-- Information Section -->
+    <div class="flex flex-col justify-center pr-6">
+        <div class="flex items-center h-1/2">
+            <!-- First Row Content -->
+            <p class="text-sm text-white  hover:cursor-pointer hover:underline">
+                {{ currentSong.title }}
+            </p>
+        </div>
+        <div class="flex items-center h-1/2">
+            <!-- Second Row Content -->
+            <p class="text-xs text-grey-200  hover:cursor-pointer hover:underline">
+                {{ currentSong.artist }}
+            </p>
+        </div>
+    </div>
+    <!-- Placeholder Column -->
+    <div class="w-10 h-10 flex justify-center items-center">
+        <button class="like-button" [ngClass]="{'liked': currentSong.liked, 'unliked': !currentSong.liked  }" (click)="likeSong(currentSong)">
+            <svg *ngIf="currentSong.liked" class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 11.917 9.724 16.5 19 7.5" />
+            </svg>
+        </button>
+    </div>
+</div>

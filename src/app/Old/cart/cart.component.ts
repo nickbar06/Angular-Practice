@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../cart.service';
+import { CartService } from '../../cart.service';
 
 import { Form, FormBuilder } from '@angular/forms';
 
@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
     private cartService: CartService,
     private formBuilder: FormBuilder
   ) { }
-  
+
   ngOnInit(): void {
   }
 

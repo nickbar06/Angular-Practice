@@ -1,0 +1,32 @@
+.play-button {
+    background-color: white;
+    color: black;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    padding: 1px;
+    /* transform: scale(1.2, 1.2); */
+}
+
+.play-button > svg {
+    margin-left: 3px;
+    fill: black;
+}
+
+.skip-button {
+    background-color: transparent;
+    color: grey;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    padding: 1px;
+}
+
+.rewind-button {
+    background-color: transparent;
+    color: grey;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    padding: 1px;
+}
