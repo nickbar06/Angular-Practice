@@ -1,1 +1,33 @@
-<p>action-picker works!</p>
+<div class="w-full bg-neutral-900 rounded-lg shadow">
+    <ul role="list">
+        <li class="p-4 w-full hover:cursor-pointer" (click)="changeView('homeView')">
+            <div class="flex items-center hover:cursor-pointer ">
+                <div class="flex p-2">
+                    <svg [ngClass]="current === 'homeView' ? 'fill-stone-400' : ''"  class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="grey" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                      </svg>
+                </div>
+                <div class="flex-none min-w-0 ms-4">
+                    <p class="text-sm font-bold text-stone-400 truncate dark:text-grey-200">
+                        Home
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="p-4 w-full hover:cursor-pointer" (click)="changeView('chatView')">
+            <div class="flex items-center hover:cursor-pointer">
+                <div class="flex p-2">
+                    <svg [ngClass]="current === 'chatView' ? 'fill-stone-400' : ''"  class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="grey" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6l3 3v-3h2V9h-2M4 4h11v8H9l-3 3v-3H4V4Z"/>
+                      </svg>
+                      
+                </div>
+                <div class="flex-none min-w-0 ms-4">
+                    <p class="text-sm font-bold text-stone-400 truncate dark:text-white">
+                        Chat
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

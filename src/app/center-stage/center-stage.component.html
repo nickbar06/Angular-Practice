@@ -1,1 +1,8 @@
-<p>center-stage works!</p>
+<div class="w-full">
+    <div id="homeView" *ngIf="currentView === 'homeView'" class="">
+        <home-view></home-view>
+    </div>
+    <div id="chatView" *ngIf="currentView === 'chatView'" class="">
+        <chat-view></chat-view>
+    </div>
+</div>

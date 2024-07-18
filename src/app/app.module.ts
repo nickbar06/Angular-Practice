@@ -14,6 +14,7 @@ import { ChatViewComponent } from './center-stage/chat-view/chat-view.component'
 import { HomeViewComponent } from './center-stage/home-view/home-view.component';
 import { NowPlayingComponent } from './bottom-bar/now-playing/now-playing.component';
 import { PlayerComponent } from './bottom-bar/player/player.component';
+import { SoundControlComponent } from './bottom-bar/sound-control/sound-control.component';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { PlayerComponent } from './bottom-bar/player/player.component';
     HomeViewComponent,
     NowPlayingComponent,
     PlayerComponent,
+    SoundControlComponent,
   ],
   bootstrap: [AppComponent],
 })

@@ -18,7 +18,6 @@ export class SongService implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("initialized")
     this.currentSong = likedSongs.songs[this.index];
   }
 
