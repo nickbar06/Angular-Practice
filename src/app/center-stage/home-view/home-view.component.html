@@ -1,1 +1,91 @@
-<p>home-view works!</p>
+<div class="bg-neutral-900 rounded-lg h-full justify-center">
+  <div
+    class="flex rounded-lg flex-col h-full bg-neutral-900 text-white bg-gradient-to-b from-purple-800 to-neutral-900">
+    <div class="flex items-center p-4 space-x-4 ">
+      <button class="bg-neutral-900 bg-opacity-75 rounded-full p-2">
+        <svg class="w-5 h-5 text-gray-800 rounded-full dark:text-white" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7" />
+        </svg>
+      </button>
+      <button disabled class="bg-neutral-900 bg-opacity-75 rounded-full p-2 disabled:cursor-not-allowed">
+        <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex items-center justify-center p-4 ">
+      <div class="flex items-center justify-between bg-gradient-to-br from-black to-purple-800 p-8 rounded-lg">
+        <!-- Album Image -->
+        <div class="flex-shrink-0">
+          <img src="https://developer.spotify.com/images/guidelines/design/icon3@2x.png" alt="Album Cover" class="w-48 h-48 rounded-lg shadow-lg">
+        </div>
+      
+        <!-- Text Content -->
+        <div class="flex-grow ml-8">
+          <div class="text-sm text-gray-400 mb-2">Pssst</div>
+          <h1 class="text-5xl font-bold text-white mb-2">Spotify Chat Roulette is here</h1>
+          <div class="text-lg text-gray-300 mb-4">Developed by 
+            <a target="_blank" href="https://linkedin.com/in/nicolasio">Nick</a>
+          </div>
+          <div class="text-base text-gray-400 mb-4">Spotify will place you in rooms with others listening to the same artist as you!</div>
+      
+          <!-- Buttons -->
+          <div class="flex space-x-4">
+            <button class="bg-green-500 text-white px-6 py-2 rounded-full font-semibold">Chat</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Header -->
+    <div class="flex items-center justify-between p-4 ">
+      <div class="flex space-x-4">
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full">All</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full">Music</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full">Podcasts</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full">Audiobooks</button>
+      </div>
+      <div class="flex space-x-4 items-center">
+        <button class="text-white">🔔</button>
+        <button class="text-white">👥</button>
+        <button class="text-white">👤</button>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="flex space-x-4 overflow-x-auto p-4 ">
+      <div class="flex-shrink-0 w-48 bg-gray-800 p-4 rounded-lg">
+        <img src="liked-songs.png" alt="Liked Songs" class="w-full h-24 object-cover rounded-lg">
+        <div class="mt-2">Liked Songs</div>
+      </div>
+      <div class="flex-shrink-0 w-48 bg-gray-800 p-4 rounded-lg">
+        <img src="hard-techno.png" alt="Hard Techno" class="w-full h-24 object-cover rounded-lg">
+        <div class="mt-2">Hard Techno</div>
+      </div>
+      <!-- Repeat similar divs for other categories -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow overflow-y-auto p-4">
+      <div class="text-xl mb-4">Made For Nick Barrionuevo</div>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="daily-mix-1.png" alt="Daily Mix 1" class="w-full h-48 object-cover rounded-lg">
+          <div class="mt-2">Daily Mix 1</div>
+          <div class="text-gray-400 text-sm">J Balvin, Bad Bunny, Sfera Ebbasta and more</div>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="daily-mix-2.png" alt="Daily Mix 2" class="w-full h-48 object-cover rounded-lg">
+          <div class="mt-2">Daily Mix 2</div>
+          <div class="text-gray-400 text-sm">Reinier Zonneveld, Sara Landry, SWART and more</div>
+        </div>
+        <!-- Repeat similar divs for other mixes -->
+      </div>
+    </div>
+  </div>
+
+</div>

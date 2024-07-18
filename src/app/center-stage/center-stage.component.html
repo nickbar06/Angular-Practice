@@ -1,8 +1,2 @@
-<div class="w-full">
-    <div id="homeView" *ngIf="currentView === 'homeView'" class="">
-        <home-view></home-view>
-    </div>
-    <div id="chatView" *ngIf="currentView === 'chatView'" class="">
-        <chat-view></chat-view>
-    </div>
-</div>
+<home-view *ngIf="currentView === 'homeView'"></home-view>
+<chat-view *ngIf="currentView === 'chatView'"></chat-view>
