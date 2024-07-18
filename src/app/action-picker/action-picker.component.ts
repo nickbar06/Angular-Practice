@@ -12,11 +12,10 @@ export class ActionPickerComponent implements OnInit {
   constructor(private viewService: ViewService) { }
 
   ngOnInit(): void {
-
+    this.current = this.viewService.getCurrentView();
   }
 
   changeView(view: String): void {
-    console.log(view);
     this.viewService.setView(view);
     this.viewChanged.emit(view);
     this.current = view;
