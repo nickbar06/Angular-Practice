@@ -1,0 +1,16 @@
+<div class="flex items-center bg-neutral-900 rounded-lg p-2 w-full" *ngIf="library">
+    <div class="w-14 h-14 bg-gradient-to-r from-purple-400 to-blue-400 rounded-lg flex items-center justify-center">
+      <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </div>
+    <div class="ml-4">
+      <div class="text-lg font-semibold text-green-500">{{ library.libraryName }}</div>
+      <div class="flex items-center text-gray-400">
+        <svg class="h-4 w-4 mr-1 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 00-10 10 10 10 0 0010 10 10 10 0 0010-10A10 10 0 0012 2zm1 14.5v-5h-2v5h-1.5v-6.5h5V16.5h-1.5z"/>
+        </svg>
+        <span>{{ library.songs.length }} </span>
+      </div>
+    </div>
+  </div>

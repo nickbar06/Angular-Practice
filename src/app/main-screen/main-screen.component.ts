@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-screen-scomponent',
-  templateUrl: './main-screen-scomponent.component.html',
-  styleUrls: ['./main-screen-scomponent.component.css']
+  selector: 'main-screen-scomponent',
+  templateUrl: './main-screen.component.html',
+  styleUrls: ['./main-screen.component.css']
 })
 export class MainScreenScomponentComponent implements OnInit {
   currentView!: String;

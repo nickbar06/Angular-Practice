@@ -13,6 +13,7 @@ export interface Library {
 export const likedSongs =
 {
   libraryName: "Liked Songs",
+  author: "Nick Barrionuevo",
   songs: [
     {
       title: "Pure Imagination",
@@ -34,6 +35,46 @@ export const likedSongs =
     }
   ]
 };
+
+export const libraries: Library[] = [
+  likedSongs,
+  {
+    libraryName: "Hard Techno",
+    author: "Nick Barrionuevo",
+    songs: []
+  },
+  {
+    libraryName: "Your Top Songs 2020",
+    author: "Spotify",
+    songs: []
+  },
+  {
+    libraryName: "Your Top Songs 2021",
+    author: "Spotify",
+    songs: []
+  },
+  {
+    libraryName: "Your Top Songs 2022",
+    author: "Spotify",
+    songs: []
+  },
+  {
+    libraryName: "Your Top Songs 2023",
+    author: "Spotify",
+    songs: []
+  },
+  {
+    libraryName: "Ira + Nick",
+    author: "Spotify",
+    songs: []
+  },
+  {
+    libraryName: "j-rock/indie",
+    author: "dear_rinn",
+    songs: []
+  },
+
+]
 
 
 /*

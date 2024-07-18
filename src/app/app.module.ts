@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MainScreenScomponentComponent } from './main-screen-scomponent/main-screen-scomponent.component';
+import { MainScreenScomponentComponent } from './main-screen/main-screen.component';
 import { ActionPickerComponent } from './action-picker/action-picker.component';
 import { LibraryComponent } from './library/library.component';
 import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
@@ -15,6 +15,7 @@ import { HomeViewComponent } from './center-stage/home-view/home-view.component'
 import { NowPlayingComponent } from './bottom-bar/now-playing/now-playing.component';
 import { PlayerComponent } from './bottom-bar/player/player.component';
 import { SoundControlComponent } from './bottom-bar/sound-control/sound-control.component';
+import { LibraryItemComponent } from './library-item/library-item.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { SoundControlComponent } from './bottom-bar/sound-control/sound-control.
     NowPlayingComponent,
     PlayerComponent,
     SoundControlComponent,
+    LibraryItemComponent,
   ],
   bootstrap: [AppComponent],
 })

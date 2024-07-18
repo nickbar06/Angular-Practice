@@ -1,1 +1,31 @@
-<p>library works!</p>
+<div class="h-full flex flex-col bg-neutral-900 rounded-lg">
+    <!-- Static Header -->
+    <div class="flex-shrink-0 flex items-center justify-between bg-neutral-900 rounded-t-lg p-4 w-full">
+      <div class="flex items-center space-x-6 pl-2">
+        <!-- Library Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4h1v16H8V4zM15 4h1v16h-1V4z" />
+        </svg>
+        <!-- Text -->
+        <p class="text-stone-400 text-md font-bold">Your Library</p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <!-- Plus Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+        <!-- Arrow Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </div>
+    </div>
+    <!-- Scrollable Content -->
+    <div class="flex-grow overflow-y-scroll p-1">
+      <div *ngFor="let lib of libraries">
+        <library-item [library]="lib"></library-item>
+      </div>
+    </div>
+  </div>
+  

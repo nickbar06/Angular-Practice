@@ -1,13 +1,5 @@
 <div class="flex flex-col h-screen">
-  <div class="flex-grow bg-black h-full">
-      <router-outlet></router-outlet>
-  </div>
-  <div class="flex-none w-full h-20 bg-gray-200">
-    <app-bottom-bar></app-bottom-bar>
+  <div class="flex-grow bg-black flex flex-col overflow-hidden">
+    <router-outlet></router-outlet>
   </div>
 </div>
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
