@@ -1,91 +1,113 @@
 <div class="bg-neutral-900 rounded-lg h-full justify-center">
   <div
-    class="flex rounded-lg flex-col h-full bg-neutral-900 text-white bg-gradient-to-b from-purple-800 to-neutral-900">
-    <div class="flex items-center p-4 space-x-4 ">
-      <button class="bg-neutral-900 bg-opacity-75 rounded-full p-2">
-        <svg class="w-5 h-5 text-gray-800 rounded-full dark:text-white" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7" />
-        </svg>
-      </button>
-      <button disabled class="bg-neutral-900 bg-opacity-75 rounded-full p-2 disabled:cursor-not-allowed">
-        <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
-        </svg>
-      </button>
+    class="flex rounded-lg flex-col h-full bg-neutral-900 text-white bg-gradient-to-b from-purple-800 to-neutral-900 justify-between">
+    <!-- Navigation Buttons -->
+    <div class="flex items-center p-4 space-x-4 justify-between">
+      <div class="flex space-x-4 p-4 items-center˝">
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full p-2">
+          <svg class="w-5 h-5 text-gray-800 rounded-full dark:text-white" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7" />
+          </svg>
+        </button>
+        <button disabled class="bg-neutral-900 bg-opacity-75 rounded-full p-2 disabled:cursor-not-allowed">
+          <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <div>
+        <div class="flex space-x-4 p-4 items-center">
+          <button class="bg-neutral-900 bg-opacity-75 rounded-full p-2">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 5.365V3m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175 0 .593 0 1.292-.538 1.292H5.538C5 18 5 17.301 5 16.708c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 12 5.365ZM8.733 18c.094.852.306 1.54.944 2.112a3.48 3.48 0 0 0 4.646 0c.638-.572 1.236-1.26 1.33-2.112h-6.92Z" />
+            </svg>
+
+          </button>
+          <button class="bg-neutral-900 bg-opacity-75 rounded-full p-2">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="white" stroke-linecap="round" stroke-width="2"
+                d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+            </svg>
+
+          </button>
+          <button class="bg-neutral-900 bg-opacity-75 rounded-full p-1">
+
+            <img width="36" height="36" class="rounded-full"
+              src="https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-1/154466841_10158081921518652_9132729874072997295_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=109&ccb=1-7&_nc_sid=312bcd&_nc_ohc=ChyxUhciBhMQ7kNvgEagl2A&_nc_ht=scontent-ord5-1.xx&edm=AP4hL3IEAAAA&oh=00_AYBF_TuJAG9jiW2kE1kVuSKeH4_8I4UIMcP0ZQhrW4eRWQ&oe=66C0CE78" />
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="flex items-center justify-center p-4 ">
-      <div class="flex items-center justify-between bg-gradient-to-br from-black to-purple-800 p-8 rounded-lg">
+    <!-- BANNER -->
+    <div class="flex items-center justify-center pr-4 pl-4 pb-4"  *ngIf="showAnnouncement" >
+      <div class="flex items-center justify-between bg-gradient-to-br from-black to-purple-800 p-8 rounded-lg w-full">
         <!-- Album Image -->
         <div class="flex-shrink-0">
-          <img src="https://developer.spotify.com/images/guidelines/design/icon3@2x.png" alt="Album Cover" class="w-48 h-48 rounded-lg shadow-lg">
+          <img src="https://developer.spotify.com/images/guidelines/design/icon3@2x.png" alt="Album Cover"
+            class="w-48 h-48 rounded-lg shadow-lg">
         </div>
-      
+
         <!-- Text Content -->
         <div class="flex-grow ml-8">
           <div class="text-sm text-gray-400 mb-2">Pssst</div>
           <h1 class="text-5xl font-bold text-white mb-2">Spotify Chat Roulette is here</h1>
-          <div class="text-lg text-gray-300 mb-4">Developed by 
+          <div class="text-lg text-gray-300 mb-4">Developed by
             <a target="_blank" href="https://linkedin.com/in/nicolasio">Nick</a>
           </div>
-          <div class="text-base text-gray-400 mb-4">Spotify will place you in rooms with others listening to the same artist as you!</div>
-      
+          <div class="text-base text-gray-400 mb-4">Spotify will place you in rooms with others listening to the same
+            artist as you!</div>
+
           <!-- Buttons -->
           <div class="flex space-x-4">
-            <button class="bg-green-500 text-white px-6 py-2 rounded-full font-semibold">Chat</button>
+            <button class="bg-green-500 text-white px-6 py-2 rounded-full font-semibold hover:font-semibold">Chat</button>
+            <button (click)="toggleAnnouncement()" class="bg-neutral-700 text-white px-6 py-2 rounded-full font-semibold hover:font-semibold">No thanks!</button>
           </div>
         </div>
-
       </div>
     </div>
-    
+
     <!-- Header -->
     <div class="flex items-center justify-between p-4 ">
       <div class="flex space-x-4">
-        <button class="bg-neutral-900 bg-opacity-75 rounded-full">All</button>
-        <button class="bg-neutral-900 bg-opacity-75 rounded-full">Music</button>
-        <button class="bg-neutral-900 bg-opacity-75 rounded-full">Podcasts</button>
-        <button class="bg-neutral-900 bg-opacity-75 rounded-full">Audiobooks</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full font-bold hover:font-bold current">All</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full font-bold hover:font-bold">Music</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full font-bold hover:font-bold">Podcasts</button>
+        <button class="bg-neutral-900 bg-opacity-75 rounded-full font-bold hover:font-bold">Audiobooks</button>
       </div>
-      <div class="flex space-x-4 items-center">
-        <button class="text-white">🔔</button>
-        <button class="text-white">👥</button>
-        <button class="text-white">👤</button>
-      </div>
+
     </div>
 
     <!-- Categories -->
-    <div class="flex space-x-4 overflow-x-auto p-4 ">
-      <div class="flex-shrink-0 w-48 bg-gray-800 p-4 rounded-lg">
-        <img src="liked-songs.png" alt="Liked Songs" class="w-full h-24 object-cover rounded-lg">
-        <div class="mt-2">Liked Songs</div>
-      </div>
-      <div class="flex-shrink-0 w-48 bg-gray-800 p-4 rounded-lg">
-        <img src="hard-techno.png" alt="Hard Techno" class="w-full h-24 object-cover rounded-lg">
-        <div class="mt-2">Hard Techno</div>
-      </div>
-      <!-- Repeat similar divs for other categories -->
-    </div>
-
-    <!-- Main Content -->
-    <div class="flex-grow overflow-y-auto p-4">
-      <div class="text-xl mb-4">Made For Nick Barrionuevo</div>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <img src="daily-mix-1.png" alt="Daily Mix 1" class="w-full h-48 object-cover rounded-lg">
-          <div class="mt-2">Daily Mix 1</div>
-          <div class="text-gray-400 text-sm">J Balvin, Bad Bunny, Sfera Ebbasta and more</div>
+    <div class="overflow-x-auto">
+      <div class="grid grid-cols-3 gap-4 p-4 ">
+        <div *ngFor="let lib of libraries">
+          <library-item [backgroundColor]="'bg-neutral-900 bg-opacity-75'" [library]="lib"></library-item>
         </div>
-        <div class="bg-gray-800 p-4 rounded-lg">
-          <img src="daily-mix-2.png" alt="Daily Mix 2" class="w-full h-48 object-cover rounded-lg">
-          <div class="mt-2">Daily Mix 2</div>
-          <div class="text-gray-400 text-sm">Reinier Zonneveld, Sara Landry, SWART and more</div>
+      </div>
+      <div class="flex-grow overflow-y-auto p-4">
+        <div class="text-xl text-bold text-white mb-4">Made For Nick Barrionuevo</div>
+        <div class="grid grid-cols-6 gap-4">
+          <div class="bg-neutral-900 p-4 rounded-lg">
+            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb3f784b0b3a015c3a49f99847/1/en/default" alt="Daily Mix 1" class="w-full h-48 object-contain rounded-lg">
+            <div class="mt-2 text-bold">Daily Mix 1</div>
+            <div class="text-gray-200 text-sm">J Balvin, Bad Bunny, Sfera Ebbasta and more</div>
+          </div>
+          <div class="bg-neutral-900 p-4 rounded-lg">
+            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebbd9daa643e753aab5489f490/2/en/default" alt="Daily Mix 2" class="w-full h-48 object-cover rounded-lg">
+            <div class="mt-2 text-bold">Daily Mix 2</div>
+            <div class="text-gray-400 text-sm">Reinier Zonneveld, Sara Landry, SWART and more</div>
+          </div>
+          <!-- Repeat similar divs for other mixes -->
         </div>
-        <!-- Repeat similar divs for other mixes -->
       </div>
     </div>
   </div>
+
 
 </div>

@@ -1,11 +1,10 @@
-<div class="flex items-center bg-neutral-900 rounded-lg p-2 w-full" *ngIf="library">
+<div [ngClass]="backgroundColor" class="flex items-center bg-neutral-900 rounded-lg p-2 w-full" *ngIf="library">
     <div class="w-14 h-14 flex items-center justify-center">
       <img class="w-14 h-14" [src]="library.artwork" />
     </div>
     <div class="ml-4">
       <div class="text-sm font-semibold text-green-500">{{ library.libraryName }}</div>
       <div class="flex items-center text-gray-400">
-      
         <span>{{ library.songs.length }} songs</span>
       </div>
     </div>

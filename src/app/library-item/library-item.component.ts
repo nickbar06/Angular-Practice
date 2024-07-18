@@ -8,9 +8,10 @@ import { Library } from '../songs';
 })
 export class LibraryItemComponent implements OnInit {
   @Input() library!: Library;
+  @Input() backgroundColor: String = 'bg-neutral-900';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-}
+} 
