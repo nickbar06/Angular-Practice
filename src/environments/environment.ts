@@ -6,7 +6,7 @@
 export const environment = {
   production: false,
   SPOTIFY_CLIENT_ID: "3a33e5c9508449af900bb0667c56711e",
-  SPOTIFY_CLIENT_SECRET: "1c201f96491b4fc6ad46926946ecc972",
+  SPOTIFY_CLIENT_SECRET: "b93ebef144a44b45b8486eeaadc4a58e",
   SPOTIFY_REDIRECT_URI: "http://localhost:4200/callback",
   server: "http://localhost:4000"
 };
