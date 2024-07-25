@@ -1,1 +1,10 @@
-<p>chat-view works!</p>
+<div>
+  <h1>Socket.IO Chat Application</h1>
+  <div>
+    <div *ngFor="let msg of messages">{{ msg }}</div>
+  </div>
+  <form (submit)="sendMessage($event)">
+    <input type="text" [(ngModel)]="input" name="messageInput" />
+    <button type="submit">Send</button>
+  </form>
+</div>

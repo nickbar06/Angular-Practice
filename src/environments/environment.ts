@@ -2,8 +2,13 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
 export const environment = {
-  production: false
+  production: false,
+  SPOTIFY_CLIENT_ID: "3a33e5c9508449af900bb0667c56711e",
+  SPOTIFY_CLIENT_SECRET: "1c201f96491b4fc6ad46926946ecc972",
+  SPOTIFY_REDIRECT_URI: "http://localhost:4200/callback",
+  server: "http://localhost:4000"
 };
 
 /*

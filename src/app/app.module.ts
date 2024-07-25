@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MainScreenScomponentComponent } from './main-screen/main-screen.component';
+import { MainScreenComponent } from './main-screen/main-screen.component';
 import { ActionPickerComponent } from './action-picker/action-picker.component';
 import { LibraryComponent } from './library/library.component';
 import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
@@ -16,19 +17,26 @@ import { NowPlayingComponent } from './bottom-bar/now-playing/now-playing.compon
 import { PlayerComponent } from './bottom-bar/player/player.component';
 import { SoundControlComponent } from './bottom-bar/sound-control/sound-control.component';
 import { LibraryItemComponent } from './library-item/library-item.component';
+import { LoginComponent } from './login/login.component';
+import { CallbackComponent } from './callback/callback.component';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: MainScreenScomponentComponent },
+      { path: '', component: MainScreenComponent },
+      { path: 'callback', component: CallbackComponent },
+      { path: 'login', component: LoginComponent },
+      // { path: '**', redirectTo: 'main' },
     ]),
   ],
+
   declarations: [
     AppComponent,
-    MainScreenScomponentComponent,
+    MainScreenComponent,
     ActionPickerComponent,
     LibraryComponent,
     BottomBarComponent,
@@ -39,6 +47,8 @@ import { LibraryItemComponent } from './library-item/library-item.component';
     PlayerComponent,
     SoundControlComponent,
     LibraryItemComponent,
+    LoginComponent,
+    CallbackComponent,
   ],
   bootstrap: [AppComponent],
 })

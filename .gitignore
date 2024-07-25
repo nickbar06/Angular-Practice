@@ -3,3 +3,5 @@ node_modules
 .angular/*
 
 src/app/Old
+package-lock.json
+dist/
