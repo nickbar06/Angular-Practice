@@ -15,7 +15,6 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   login(): void {
-    console.log("hitting login auth service");
     this.http.get<any>(environment.server.concat('/login'), { observe: 'response' }).subscribe({
       next: response => {
         const location = response.body;
@@ -30,15 +29,17 @@ export class AuthService {
     });
   }
 
-
   exchangeCodeForToken(code: string): Observable<any> {
     const params = new HttpParams().set('code', code);
 
     return this.http.get<any>(this.tokenUrl, { params }).pipe(
       tap(response => {
-        if (response.accessToken) {
-          localStorage.setItem('accessToken', response.accessToken);
-          localStorage.setItem('refreshToken', response.refreshToken);
+        console.log(response);
+
+        if (response.access_token) {
+          localStorage.setItem('accessToken', response.access_token);
+          localStorage.setItem('refreshToken', response.refresh_token);
+          localStorage.setItem('userId', response.userId);
           this.isAuthenticated = true;
         }
       }),

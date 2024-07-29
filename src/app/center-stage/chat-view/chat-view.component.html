@@ -1,10 +1,33 @@
-<div>
-  <h1>Socket.IO Chat Application</h1>
-  <div>
-    <div *ngFor="let msg of messages">{{ msg }}</div>
+<div class="flex flex-col h-full bg-neutral-900 justify-between rounded-lg ">
+  <div class="flex-grow flex flex-col items-center justify-start p-8 overflow-hidden">
+    <h1 class="text-3xl font-semibold mb-4">Welcome to Spotify Chat Roulette</h1>
+    <p class="text-center text-gray-700 mb-8">
+      You're currently in {{ lobby }} lobby
+    </p>
+    <div class="flex flex-col w-full overflow-hidden bg-transparent p-4  h-full">
+      <div class="flex flex-col w-full overflow-auto bg-transparent h-full">
+        <div *ngFor="let msg of messages"
+          [ngClass]="{'self-end bg-blue-600 text-white': msg.user === user?.display_name, 'self-start bg-gray-200 text-black': msg.user !== user?.display_name}"
+          class="mb-2 p-2 rounded-md max-w-xs">
+          <span *ngIf="msg.user !== user?.display_name" class="block font-semibold">{{ msg.user }}</span>
+          <span *ngIf="msg.user === user?.display_name" class="block font-semibold text-white">{{ msg.user }}</span>
+          {{ msg.message }}
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full bg-neutral-800 p-4 shadow-md rounded-full">
+      <div class="flex h-full w-full">
+        <input type="text" class="flex-grow h-full   px-4 w-full rounded-full bg-neutral-600"
+          placeholder="Send a Message..." [(ngModel)]="newMessage" name="newMessage" />
+        <button class="bg-green-600 text-white p-5 rounded-full ml-2 flex" (click)="sendMessage($event)">
+          <svg class="w-5 h-5" fill="white" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke="white" stroke-width="2"
+              d="M14.752 11.168l-6.736-3.897A1 1 0 007 8.158v7.684a1 1 0 001.516.86l6.736-3.897a1 1 0 000-1.732z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
-  <form (submit)="sendMessage($event)">
-    <input type="text" [(ngModel)]="input" name="messageInput" />
-    <button type="submit">Send</button>
-  </form>
-</div>

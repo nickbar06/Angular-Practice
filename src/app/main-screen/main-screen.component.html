@@ -2,28 +2,30 @@
   <app-login></app-login>
 </div>
 <ng-template #authenticatedContent>
-  <div class="flex flex-grow overflow-hidden">
-    <!-- Left Pane -->
-    <div class="flex flex-col w-3/12 h-full items-center pl-4">
-      <div class="flex flex-col justify-center w-full h-full">
-        <div class="flex items-center h-1/5 w-full">
-          <action-picker (viewChanged)="onViewChanged($event)" class="w-full"></action-picker>
+  <div class="flex flex-col h-screen rounded-full">
+    <div class="flex flex-grow overflow-hidden">
+      <!-- Left Pane -->
+      <div class="flex flex-col w-3/12 h-full items-center pl-4">
+        <div class="flex flex-col justify-center w-full h-full">
+          <div class="flex items-center h-1/5 w-full">
+            <action-picker (viewChanged)="onViewChanged($event)" class="w-full"></action-picker>
+          </div>
+          <div class="flex-grow items-center h-4/5 overflow-y-auto">
+            <library class="w-full"></library>
+          </div>
         </div>
-        <div class="flex-grow items-center h-4/5 overflow-y-auto">
-          <library class="w-full"></library>
+      </div>
+      <!-- Center Stage -->
+      <div class="flex flex-col w-9/12 h-full items-center pl-4">
+        <div class="flex flex-col justify-center w-full h-full">
+          <div class="flex items-center h-full w-full">
+            <center-stage [currentView]="currentView" class="h-full w-full pt-3"></center-stage>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Center Stage -->
-    <div class="flex flex-col w-9/12 h-full items-center pl-4">
-      <div class="flex flex-col justify-center w-full h-full">
-        <div class="flex items-center h-full w-full">
-          <center-stage [currentView]="currentView" class="h-full w-full pt-3"></center-stage>
-        </div>
-      </div>
+    <div class="flex-none w-full bg-gray-200">
+      <app-bottom-bar></app-bottom-bar>
     </div>
-  </div>
-  <div class="flex-none w-full bg-gray-200">
-    <app-bottom-bar></app-bottom-bar>
   </div>
 </ng-template>

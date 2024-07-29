@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SocketService } from 'src/app/socket.service';
 import { SongService } from 'src/app/song.service';
 import { Song } from 'src/app/songs';
 
@@ -11,20 +12,19 @@ export class PlayerComponent implements OnInit {
   @Output() songChanged = new EventEmitter<Song>();
   currentSong: Song | undefined;
   constructor(
-    private songService: SongService
+    private songService: SongService,
+    private socketService: SocketService
   ) { }
 
   ngOnInit(): void {
     this.currentSong = this.songService.currentSong;
   }
 
-  skip() {
-    const newSong = this.songService.skipForward();
-    this.songChanged.emit(newSong);
+  skipSong(): void {
+    this.socketService.emit('skip_song');
   }
 
-  skipBack() {
-    const newSong = this.songService.skipBack();
-    this.songChanged.emit(newSong);
+  backSong(): void {
+    this.socketService.emit('back_song');
   }
 }

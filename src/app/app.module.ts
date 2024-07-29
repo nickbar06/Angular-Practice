@@ -30,7 +30,7 @@ import { CallbackComponent } from './callback/callback.component';
       { path: '', component: MainScreenComponent },
       { path: 'callback', component: CallbackComponent },
       { path: 'login', component: LoginComponent },
-      // { path: '**', redirectTo: 'main' },
+      // { path: '**', redirectTo: '' },
     ]),
   ],
 

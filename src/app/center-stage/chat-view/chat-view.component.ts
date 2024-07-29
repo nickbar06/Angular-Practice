@@ -1,61 +1,41 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { io, Socket } from 'socket.io-client';
-
+import { Component, OnInit } from '@angular/core';
+import { SocketService } from 'src/app/socket.service';
 @Component({
   selector: 'chat-view',
   templateUrl: './chat-view.component.html',
   styleUrls: ['./chat-view.component.css']
 })
-export class ChatViewComponent implements OnInit, OnDestroy {
-  messages: string[] = [];
-  input: string = '';
-  private socket: Socket;
+export class ChatViewComponent implements OnInit {
+  newMessage: string = '';
+  messages: { user: string, message: string }[] = [{ user: "Ira", message: "hell yea" }];
+  lobby: string = '';
+  user: any;
 
-  constructor() {
-    this.socket = io('http://localhost:4000', {
-      transports: ['polling'],
-      withCredentials: true
-    });
-  }
+  constructor(private socketService: SocketService) { }
 
   ngOnInit(): void {
-    this.socket.on('connect', () => {
-      console.log('Connected to server');
+    this.socketService.connect();
+
+    this.socketService.onConnect().subscribe(() => {
+      this.socketService.emit('get_current_song');
     });
 
-    this.socket.on('connect_error', (error: any) => {
-      console.error('Connection error:', error);
+    this.socketService.onCurrentSong().subscribe((data) => {
+      this.lobby = data.artist;
+      this.user = data.user;
     });
 
-    this.socket.on('disconnect', () => {
-      console.log('Disconnected from server');
+    this.socketService.onChatMessage().subscribe((msg: { user: string, message: string }) => {
+      console.log(this.messages);
+      this.messages.push(msg);
     });
-
-    this.socket.on('new_user', (message: string) => {
-      this.messages.push(message);
-    });
-
-    this.socket.on('user_left', (message: string) => {
-      this.messages.push(message);
-    });
-
-    this.socket.on('chat_message', (message: any) => {
-      console.log('Message received:', message);
-      this.messages.push(`${message.user}: ${message.message}`);
-    });
-  }
-
-  ngOnDestroy(): void {
-    if (this.socket) {
-      this.socket.disconnect();
-    }
   }
 
   sendMessage(event: Event): void {
     event.preventDefault();
-    if (this.input.trim()) {
-      this.socket.emit('chat_message', { message: this.input });
-      this.input = '';
+    if (this.newMessage.trim()) {
+      this.socketService.emit('chat_message', { message: this.newMessage });
+      this.newMessage = '';
     }
   }
 }
