@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ViewService } from '../view.service';
 
 @Component({
@@ -7,8 +7,8 @@ import { ViewService } from '../view.service';
   styleUrls: ['./center-stage.component.css']
 })
 export class CenterStageComponent implements OnInit {
-  // currentView!: String;
   @Input() currentView!: String;
+  @Output() viewChanged = new EventEmitter<string>();
 
   constructor(private viewService: ViewService) { }
 
@@ -20,5 +20,7 @@ export class CenterStageComponent implements OnInit {
     this.currentView = this.viewService.getCurrentView();
   }
 
-
+  onViewChanged(view: string): void {
+    this.viewChanged.emit(view);
+  }
 }

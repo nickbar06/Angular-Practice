@@ -19,7 +19,8 @@
       <div class="flex flex-col w-9/12 h-full items-center pl-4">
         <div class="flex flex-col justify-center w-full h-full">
           <div class="flex items-center h-full w-full">
-            <center-stage [currentView]="currentView" class="h-full w-full pt-3"></center-stage>
+            <center-stage [currentView]="currentView" (viewChanged)="onViewChanged($event)" class="h-full w-full pt-3"></center-stage>
+          
           </div>
         </div>
       </div>

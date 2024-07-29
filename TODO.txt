@@ -1,0 +1,10 @@
+- Make server return artist/current song information
+- Chat-view should reflect current artist
+- Add player functionality
+    - SKIP 
+    - PAUSE
+    - PLAY
+    - BACK
+- Make Now-playing reflect song changes
+- Refactor / clean code
+x Route to chat from home-view banner

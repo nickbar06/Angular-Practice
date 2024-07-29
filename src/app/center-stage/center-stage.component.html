@@ -1,2 +1,2 @@
-<home-view *ngIf="currentView === 'homeView'"></home-view>
+<home-view *ngIf="currentView === 'homeView'" (viewChanged)="onViewChanged($event)"></home-view>
 <chat-view *ngIf="currentView === 'chatView'"></chat-view>

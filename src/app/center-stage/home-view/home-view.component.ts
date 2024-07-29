@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Library, libraries } from 'src/app/songs';
 
 @Component({
@@ -9,6 +9,8 @@ import { Library, libraries } from 'src/app/songs';
 export class HomeViewComponent implements OnInit {
   showAnnouncement = true;
   libraries: Library[] = [];
+  @Output() viewChanged = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,5 +19,10 @@ export class HomeViewComponent implements OnInit {
 
   toggleAnnouncement(): void {
     this.showAnnouncement = !this.showAnnouncement;
+  }
+
+
+  navigateToChat(): void {
+    this.viewChanged.emit('chatView');
   }
 }
